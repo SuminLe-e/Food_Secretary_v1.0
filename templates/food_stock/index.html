@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- jquery plugin, necessary for datatable plugin to work -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- datatable plugin -->
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+        <!-- external datatable css -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <!-- custom css -->
+        <link rel="stylesheet" href="{% static "food_stock/styles.css" %}">
+        <!-- jquery javascript -->
+        <script src={% static "food_stock/javascript.js"%}></script>
+        <!-- javascript -->
+        <script src="{% static "food_stock/jquery.js" %}"></script>
+
+        <!-- title of the webpage -->
+        <title>Food secretary</title>
+    </head>
+
+    <body>
+        <!-- Big title on the top -->
+        <h1 id="title">Your storage page</h1>
+        <!-- foodTable -->
+        <table id="food_stock_food_list" class="food_list">
+            <!-- thead = table head -->
+            <thead>
+                <!-- tr = table row -->
+                <tr>
+                    <!-- th = table header -->
+                    <th>Food Name</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Category</th>
+                    <th>Storage Option</th>
+                    <th>Expiry Date</th>
+                    <th>edit</th>
+                </tr>
+            </thead>
+            <!-- tbody = table body -->
+            <tbody>
+                {% for food_stock_food_list in all_food %}
+                <tr>
+                    <!-- td = table data, one cell in a table -->
+                    <td>{{ food_stock_food_list.name }}</td>
+                    <td>{{ food_stock_food_list.quantity }}</td>
+                    <td>{{ food_stock_food_list.unit }}</td>
+                    <td>{{ food_stock_food_list.storage_type }}</td>
+                    <td>{{ food_stock_food_list.category }}</td>
+                    <td>{{ food_stock_food_list.expiry_date }}</td>
+                    <td>edit</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</html>
