@@ -4,11 +4,14 @@ import csv
 import json
 import MySQLdb
 from csv import reader
+import mysql.connector
 
-mydb = MySQLdb.connect(host='localhost',
-    user=,
-    passwd=,
-    db=')
+
+mydb = mysql.connector.connect(host='127.0.0.1',
+    user="root",
+    passwd="foodsecretary!",
+    db="food_secretary",
+    auth_plugin='mysql_native_password')
 cursor = mydb.cursor()
 
 # comment this line if the table is already created
