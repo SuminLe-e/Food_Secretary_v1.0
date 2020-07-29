@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'Food_Secretary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'FS_mySQL',
-        'USER': 'tester',
-        'PASSWORD': '1234567',
+        'NAME': 'food_secretary',
+        'USER': 'root',
+        'PASSWORD': 'foodsecretary!',
         'HOST': 'localhost',
         'PORT': '3306',
     }
