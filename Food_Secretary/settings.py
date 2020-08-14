@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os.path
+#import mysql.connector
+# import MySQLdb
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -82,14 +84,21 @@ WSGI_APPLICATION = 'Food_Secretary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+#        'OPTIONS': {
+#            'read_default_file': 'etc/my.cnf',
+#        },
+        
         'NAME': 'food_secretary',
         'USER': 'root',
-        'PASSWORD': 'foodsecretary!',
-        'HOST': 'localhost',
+        'PASSWORD': 'Foodsecretary1!',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
 
+#cnx = mysql.connector.connect(**DATABASES)
+
+#cnx.close()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

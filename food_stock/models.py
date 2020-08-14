@@ -9,5 +9,5 @@ class food_list(models.Model):
     category = models.CharField(max_length=20)
     expiry_date = models.DateField()
 
-    def __str__(self):
-        return self.name+' expires:'+ self.expiry_date
+#    def __str__(self):
+#        return self.name+' expires:'+ self.expiry_date
