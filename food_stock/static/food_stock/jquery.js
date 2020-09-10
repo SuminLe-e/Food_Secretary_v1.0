@@ -15,7 +15,7 @@ $(document).ready( function () {
     function dele() {
         $('.trash_icon').on('click', function () {
 
-            console.log("clicked");
+            console.log("clicked 1");
             table
             .row($(this).parents('tr'))
             .remove()

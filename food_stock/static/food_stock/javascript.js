@@ -4,8 +4,10 @@
   window.addEventListener("load", init);
 
   function init() {
-
+    console.log("here 0")
     id("add_btn").addEventListener("click",open_add);
+    console.log("here 1")
+
   }
 
   function open_add() {

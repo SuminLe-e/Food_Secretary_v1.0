@@ -9,5 +9,8 @@ class food_list(models.Model):
     category = models.CharField(max_length=20)
     expiry_date = models.DateField()
 
+    class Meta:
+        db_table = 'food_stock_food_list'
+
     def __str__(self):
         return self.name+' expires:'+ self.expiry_date
